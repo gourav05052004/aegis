@@ -1,0 +1,174 @@
+{
+  "dataset_split": {
+    "total_samples": 100000,
+    "train_samples": 70000,
+    "val_samples": 15000,
+    "test_samples": 15000
+  },
+  "optimal_weights": {
+    "w1_baseline": 0.3,
+    "w2_model": 0.7
+  },
+  "validation_grid_sweep": [
+    {
+      "w1_baseline": 0.3,
+      "w2_model": 0.7,
+      "top_1pct_precision": 1.0
+    },
+    {
+      "w1_baseline": 0.4,
+      "w2_model": 0.6,
+      "top_1pct_precision": 1.0
+    },
+    {
+      "w1_baseline": 0.5,
+      "w2_model": 0.5,
+      "top_1pct_precision": 1.0
+    },
+    {
+      "w1_baseline": 0.6,
+      "w2_model": 0.4,
+      "top_1pct_precision": 1.0
+    }
+  ],
+  "test_set_overall_metrics": {
+    "precision": 1.0,
+    "recall": 0.9973,
+    "f1_score": 0.9987,
+    "pr_auc": 1.0,
+    "false_positive_rate": 0.0,
+    "top_1pct_alert_precision": 1.0
+  },
+  "per_class_metrics": {
+    "Brute Force": {
+      "precision": 1.0,
+      "recall": 0.9815,
+      "f1_score": 0.9907,
+      "support": 54
+    },
+    "Credential Stuffing": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 53
+    },
+    "Device Spoofing": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 53
+    },
+    "Impossible Travel": {
+      "precision": 0.9455,
+      "recall": 0.963,
+      "f1_score": 0.9541,
+      "support": 54
+    },
+    "Insider Drift": {
+      "precision": 0.7955,
+      "recall": 0.6481,
+      "f1_score": 0.7143,
+      "support": 54
+    },
+    "Lateral Movement": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 54
+    },
+    "Low-and-Slow": {
+      "precision": 0.6774,
+      "recall": 0.7925,
+      "f1_score": 0.7304,
+      "support": 53
+    },
+    "Normal": {
+      "precision": 0.9999,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 14625
+    }
+  },
+  "multiclass_confusion_matrix": [
+    [
+      53,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      53,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      53,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      52,
+      0,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      35,
+      0,
+      18,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      54,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      9,
+      0,
+      42,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      14625
+    ]
+  ]
+}
