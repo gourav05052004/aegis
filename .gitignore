@@ -15,3 +15,8 @@ dist/
 .vscode/
 *.swp
 *.log
+
+# Environment variables
+.env
+.env.*
+!.env.example
