@@ -12,7 +12,7 @@
 ---
 
 ### 🚀 Quick Links
-[Live Demo](#-how-to-run-locally-developer-quickstart) | [Video Walkthrough](https://youtube.com) | [Presentation Deck](https://slides.com) | [System Architecture Diagram](#-key-technical-decisions--system-architecture-judge-delighters) | [Benchmark Metrics](#-phase-3-held-out-benchmark-results)
+[Live Demo](https://aegis-soc-copilot.streamlit.app/) | [Video Walkthrough](https://youtube.com) | [Presentation Deck](https://slides.com) | [System Architecture Diagram](#-key-technical-decisions--system-architecture-judge-delighters) | [Benchmark Metrics](#-phase-3-held-out-benchmark-results)
 
 ---
 
@@ -323,14 +323,11 @@ python src/llm_copilot.py
 
 ---
 
-## 👥 Team & Acknowledgments
+## 👥  Acknowledgments
 
-Built with ❤️ for the **Honeywell Cyber Security Hackathon**.
+Built with ❤️ for the **Honeywell Campus Connect Hackathon 2026**.
 
-| Name | Role | GitHub / Social |
-| :--- | :--- | :--- |
-| **Gourav** | Lead AI/ML Engineer & Systems Architect | [@gourav05052004](https://github.com/gourav05052004) |
-| **Honeywell Hackathon Team** | Full-Stack & Cyber Security Engineers | [Honeywell Repositories](https://github.com/gourav05052004/HW) |
+
 
 ---
 
@@ -341,5 +338,5 @@ This project is licensed under the **MIT License** - see the full [LICENSE](LICE
 ---
 
 <p align="center">
-  <b>AegisSOC Anomaly Detection System — Hackathon Submission (All 8 Phases Complete & Verified)</b>
+  <b>AegisSOC Anomaly Detection System —  (All  Phases Complete & Verified)</b>
 </p>

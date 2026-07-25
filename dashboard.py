@@ -241,13 +241,41 @@ CUSTOM_CSS = """
     }
 
     /* Form Controls & General Text Contrast */
-    label, p, span, h1, h2, h3, h4 {
+    label, p, h1, h2, h3, h4 {
         color: #F1F5F9 !important;
     }
     .stSlider label, .stSelectbox label, .stTextInput label {
         color: #38BDF8 !important;
         font-weight: 600 !important;
     }
+
+    /* Code Blocks & CLI Command Containers Dark High-Contrast Styling */
+    [data-testid="stCodeBlock"], [data-testid="stCode"], .stCodeBlock {
+        background-color: #0D1117 !important;
+        border: 1px solid #2A364F !important;
+        border-radius: 8px !important;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4) !important;
+    }
+    [data-testid="stCodeBlock"] pre, [data-testid="stCodeBlock"] code, .stCodeBlock code, .stCodeBlock pre {
+        background-color: #0D1117 !important;
+        color: #00E5FF !important;
+        font-family: 'Fira Code', 'Consolas', monospace !important;
+        font-size: 0.92rem !important;
+    }
+    [data-testid="stCodeBlock"] span, .stCodeBlock span {
+        color: #00E5FF !important;
+    }
+    [data-testid="stCodeBlock"] button {
+        background-color: #1A2234 !important;
+        color: #00E5FF !important;
+        border: 1px solid #2A364F !important;
+        border-radius: 6px !important;
+    }
+    [data-testid="stCodeBlock"] button:hover {
+        background-color: #2A364F !important;
+        color: #38BDF8 !important;
+    }
+
 
     /* Custom HTML Table Container */
     .soc-table-container {
