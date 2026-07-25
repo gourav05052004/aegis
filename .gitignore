@@ -1,1 +1,17 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
 
+# Extended Python & Environment Exclusions
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.idea/
+.vscode/
+*.swp
+*.log
