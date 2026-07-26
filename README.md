@@ -55,7 +55,7 @@ AegisSOC delivers an **end-to-end 8-phase cyber anomaly detection & autonomous S
 Filter alerts dynamically using an Alert Budget slider (Top 1%, 5%, 10%). View interactive scatter plot timelines mapping Hybrid Risk Scores against execution timestamps, complete with lock-on event selectors.
 
 ![Threat Investigation Queue & Risk Scatter Plot](docs/screenshots/threat_triage.png)
-*What the Judge sees: Real-time alert prioritization table color-coded by threat severity with locked-on event detail panels.*
+*Real-time alert prioritization table color-coded by threat severity with locked-on event detail panels.*
 
 ---
 
@@ -63,7 +63,7 @@ Filter alerts dynamically using an Alert Budget slider (Top 1%, 5%, 10%). View i
 Drill down into individual entity behavior (Users, Service Accounts, Edge Devices). Reconstruct full chronological incident storyboards comparing real-time telemetry against historical baseline profiles.
 
 ![Entity Timeline & Attack Storyboard](docs/screenshots/entity_storyboard.png)
-*What the Judge sees: Chronological swimlanes tracking an entity's trajectory from normal baseline behavior to multi-stage compromised activity.*
+*Chronological swimlanes tracking an entity's trajectory from normal baseline behavior to multi-stage compromised activity.*
 
 ---
 
@@ -71,7 +71,7 @@ Drill down into individual entity behavior (Users, Service Accounts, Edge Device
 Eliminate black-box ML skepticism. `shap.TreeExplainer` breaks down every high-risk alert (Hybrid Score ≥ 0.7) into horizontal feature attribution charts and plain-English SOC analyst notes.
 
 ![SHAP Feature Attribution & Root Cause Analysis](docs/screenshots/shap_explainability.png)
-*What the Judge sees: Quantified feature contribution bars showing exactly why an event was flagged (e.g., Haversine Velocity > 800 km/h, Off-Hours Access).*
+*Quantified feature contribution bars showing exactly why an event was flagged (e.g., Haversine Velocity > 800 km/h, Off-Hours Access).*
 
 ---
 
@@ -79,7 +79,7 @@ Eliminate black-box ML skepticism. `shap.TreeExplainer` breaks down every high-r
 Newly created accounts trigger zero false positives. Peer-group baselines (N_events = 5 threshold) smoothly transition entities from peer-level expectations to individual EWMA behavior.
 
 ![Cold Start Peer Group Matrix & Transition Curves](docs/screenshots/cold_start_matrix.png)
-*What the Judge sees: Interactive sigmoid transition graphs demonstrating score normalization as new entities record their first 10 events.*
+*Interactive sigmoid transition graphs demonstrating score normalization as new entities record their first 10 events.*
 
 ---
 
@@ -87,7 +87,7 @@ Newly created accounts trigger zero false positives. Peer-group baselines (N_eve
 In-session human-in-the-loop analyst feedback. When an analyst clicks "Mark Alert as Legitimate", the engine adapts entity baselines in real time without requiring full model retraining.
 
 ![In-Session Concept Drift Feedback Loop](docs/screenshots/concept_drift.png)
-*What the Judge sees: Live post-feedback risk score recalculation demonstrating dynamic model adaptation in < 2ms.*
+*Live post-feedback risk score recalculation demonstrating dynamic model adaptation in < 2ms.*
 
 ---
 
@@ -95,7 +95,7 @@ In-session human-in-the-loop analyst feedback. When an analyst clicks "Mark Aler
 Generative AI pipeline analyzing threat contexts to output executive CISO incident summaries, mapped MITRE ATT&CK technique IDs (e.g., T1078, T1020), and 1-line copy-paste CLI containment commands.
 
 ![AI SOC Copilot Incident Briefings & Containment](docs/screenshots/ai_copilot.png)
-*What the Judge sees: Ready-to-execute terminal scripts (e.g., `aws iam revoke-security-credentials`) generated instantly for containment.*
+*Ready-to-execute terminal scripts (e.g., `aws iam revoke-security-credentials`) generated instantly for containment.*
 
 ---
 
@@ -103,16 +103,16 @@ Generative AI pipeline analyzing threat contexts to output executive CISO incide
 Natural language interface allowing analysts to query event logs, baseline profiles, and historical predictions using conversational English with recommended prompt templates.
 
 ![Ask My SOC RAG Chatbot Interface](docs/screenshots/rag_assistant.png)
-*What the Judge sees: Conversational threat hunter interface answering complex queries over 100,000 raw telemetry logs instantly.*
+*Conversational threat hunter interface answering complex queries over 100,000 raw telemetry logs instantly.*
 
 ---
 
 <a name="system-architecture"></a>
-## ⚡ Key Technical Decisions & System Architecture (Judge Delighters)
+## ⚡ Key Technical Decisions & System Architecture
 
 The diagram below outlines the complete multi-stage system architecture for AegisSOC, detailing the end-to-end telemetry pipeline from synthetic log generation and feature extraction to hybrid score fusion, cold-start handling, SHAP explainability, interactive dashboard rendering, and AI copilot response.
 
-![AegisSOC End-to-End System & Streaming Architecture Diagram](docs/architecture.png)
+![AegisSOC End-to-End System & Streaming Architecture Diagram](docs/architecture.png?v=2)
 *Figure 2: Complete AegisSOC End-to-End System & Streaming Architecture.*
 
 ---
