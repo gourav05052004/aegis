@@ -1,0 +1,179 @@
+{
+  "overall_metrics": {
+    "precision": 1.0,
+    "recall": 0.9973333333333333,
+    "f1_score": 0.9986648865153538,
+    "accuracy": 0.9999333333333333,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "false_positive_rate": 0.0,
+    "false_positive_count": 0,
+    "true_positive_count": 374,
+    "false_negative_count": 1,
+    "true_negative_count": 14625,
+    "top_1pct_alert_accuracy": 1.0
+  },
+  "latency_metrics": {
+    "mean_latency_ms": 40.482220001285896,
+    "median_latency_ms": 38.975700008450076,
+    "p95_latency_ms": 56.28881501615978,
+    "p99_latency_ms": 63.882658989750816,
+    "throughput_events_per_sec": 246858.7227912737
+  },
+  "attack_wise_table": [
+    {
+      "Attack Type": "Brute Force",
+      "Support": 54,
+      "Precision": 1.0,
+      "Recall": 0.9815,
+      "F1-Score": 0.9907,
+      "Accuracy": 0.9999,
+      "Mean Risk Score": 0.8198
+    },
+    {
+      "Attack Type": "Credential Stuffing",
+      "Support": 53,
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Accuracy": 1.0,
+      "Mean Risk Score": 0.892
+    },
+    {
+      "Attack Type": "Device Spoofing",
+      "Support": 53,
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Accuracy": 1.0,
+      "Mean Risk Score": 0.8427
+    },
+    {
+      "Attack Type": "Impossible Travel",
+      "Support": 54,
+      "Precision": 0.9455,
+      "Recall": 0.963,
+      "F1-Score": 0.9541,
+      "Accuracy": 0.9997,
+      "Mean Risk Score": 0.7821
+    },
+    {
+      "Attack Type": "Insider Drift",
+      "Support": 54,
+      "Precision": 0.7955,
+      "Recall": 0.6481,
+      "F1-Score": 0.7143,
+      "Accuracy": 0.9981,
+      "Mean Risk Score": 0.7746
+    },
+    {
+      "Attack Type": "Lateral Movement",
+      "Support": 54,
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Accuracy": 1.0,
+      "Mean Risk Score": 0.9042
+    },
+    {
+      "Attack Type": "Low-and-Slow",
+      "Support": 53,
+      "Precision": 0.6774,
+      "Recall": 0.7925,
+      "F1-Score": 0.7304,
+      "Accuracy": 0.9979,
+      "Mean Risk Score": 0.8148
+    },
+    {
+      "Attack Type": "Normal",
+      "Support": 14625,
+      "Precision": 0.9999,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Accuracy": 0.9999,
+      "Mean Risk Score": 0.0576
+    }
+  ],
+  "confusion_matrix_multiclass": [
+    [
+      53,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      53,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      53,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      52,
+      0,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      35,
+      0,
+      18,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      54,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      9,
+      0,
+      42,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      14625
+    ]
+  ]
+}
