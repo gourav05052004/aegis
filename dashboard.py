@@ -35,6 +35,14 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+# -----------------------------------------------------------------------------
+# Lightweight Keep-Alive / Health Ping Endpoint
+# -----------------------------------------------------------------------------
+if "ping" in st.query_params or "health" in st.query_params:
+    st.write({"status": "ok", "message": "A.E.G.I.S. SOC dashboard is awake", "timestamp": time.time()})
+    st.stop()
+
+
 CUSTOM_CSS = """
 <style>
     /* Global Page Styling */
@@ -438,11 +446,11 @@ ctrl_col1, ctrl_col2 = st.columns([1, 1])
 with ctrl_col1:
     st.markdown("#### 📡 Real-Time Telemetry Stream Control")
     if not is_streaming:
-        if st.button("▶️ Start Simulated Real-Time Telemetry Stream", key="btn_start_stream", type="primary", width="stretch"):
+        if st.button("▶️ Start Simulated Real-Time Telemetry Stream", key="btn_start_stream", type="primary", use_container_width=True):
             st.session_state["stream_active"] = True
             st.rerun()
     else:
-        if st.button("⏹️ Stop Telemetry Stream", key="btn_stop_stream", type="secondary", width="stretch"):
+        if st.button("⏹️ Stop Telemetry Stream", key="btn_stop_stream", type="secondary", use_container_width=True):
             st.session_state["stream_active"] = False
             proc = st.session_state.get("stream_process")
             if proc is not None:
@@ -596,7 +604,7 @@ def render_live_dashboard(is_streaming, risk_threshold):
                 margin=dict(l=20, r=20, t=40, b=20),
                 height=360
             )
-            st.plotly_chart(fig_scatter, width="stretch")
+            st.plotly_chart(fig_scatter, use_container_width=True)
 
             st.markdown("### 📋 Prioritized Alert Queue")
             
@@ -733,7 +741,7 @@ def render_live_dashboard(is_streaming, risk_threshold):
                         yaxis=dict(title_font=dict(color="#F1F5F9", size=13), tickfont=dict(color="#CBD5E1", size=11), gridcolor="#2A364F"),
                         height=360
                     )
-                    st.plotly_chart(fig_timeline, width="stretch")
+                    st.plotly_chart(fig_timeline, use_container_width=True)
 
                 with col_comp:
                     st.markdown("#### Baseline vs. Event Telemetry")
@@ -829,7 +837,7 @@ def render_live_dashboard(is_streaming, risk_threshold):
                     yaxis_title="Feature Name",
                     height=360
                 )
-                st.plotly_chart(fig_shap, width="stretch")
+                st.plotly_chart(fig_shap, use_container_width=True)
 
         with col_shap_insights:
             st.markdown("#### 🗣️ Plain-English SOC Analyst Notes")
@@ -888,7 +896,7 @@ def render_live_dashboard(is_streaming, risk_threshold):
                 yaxis=dict(title_font=dict(color="#F1F5F9", size=13), tickfont=dict(color="#CBD5E1", size=11), gridcolor="#2A364F"),
                 height=360
             )
-            st.plotly_chart(fig_cs, width="stretch")
+            st.plotly_chart(fig_cs, use_container_width=True)
 
             st.dataframe(entity_cs_df[["event_number", "is_cold_start", "assigned_peer_group", "peer_group_baseline_score", "final_hybrid_risk_score", "transition_status", "injected_attack_type"]])
 
@@ -1025,7 +1033,7 @@ def render_live_dashboard(is_streaming, risk_threshold):
                     "⚡ Generate AI Incident Brief",
                     type="primary",
                     key=f"btn_gen_{selected_event_id}",
-                    width="stretch"
+                    use_container_width=True
                 )
 
             if trigger_btn:
@@ -1128,15 +1136,15 @@ def render_live_dashboard(is_streaming, risk_threshold):
         sample_q = None
 
         with prompt_cols[0]:
-            if st.button("❓ Has user USR_002 accessed payroll?", key="btn_q1", width="stretch"):
+            if st.button("❓ Has user USR_002 accessed payroll?", key="btn_q1", use_container_width=True):
                 sample_q = "Has user USR_002 accessed payroll in the telemetry logs?"
 
         with prompt_cols[1]:
-            if st.button("❓ Summarize all cold-start entity alerts", key="btn_q2", width="stretch"):
+            if st.button("❓ Summarize all cold-start entity alerts", key="btn_q2", use_container_width=True):
                 sample_q = "Summarize all cold-start entities that triggered alerts today."
 
         with prompt_cols[2]:
-            if st.button("❓ Show high-risk alerts summary", key="btn_q3", width="stretch"):
+            if st.button("❓ Show high-risk alerts summary", key="btn_q3", use_container_width=True):
                 sample_q = "Show high-risk threat alerts summary for all entities."
 
         st.markdown("<br>", unsafe_allow_html=True)
